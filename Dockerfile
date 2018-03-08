@@ -4,7 +4,7 @@
 FROM abiosoft/caddy:builder as builder
 
 ARG version="0.10.11"
-ARG plugins="git"
+ARG plugins="cors,expires,filter,ipfilter,locale,ratelimit,realip"
 
 RUN VERSION=${version} PLUGINS=${plugins} /bin/sh /usr/bin/builder.sh
 
@@ -12,12 +12,11 @@ RUN VERSION=${version} PLUGINS=${plugins} /bin/sh /usr/bin/builder.sh
 # Final stage
 #
 FROM fanningert/baseimage-alpine
-
-MAINTAINER fanningert <thomas@fanninger.at>
+LABEL maintainer fanningert <thomas@fanninger.at>
+LABEL caddy_version="0.10.11"
 
 RUN apk update && \
     apk add --no-cache --update bash
-
 RUN apk add --no-cache --update openssh-client
 
 # install caddy
