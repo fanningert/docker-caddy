@@ -1,6 +1,6 @@
 #!/usr/bin/with-contenv bash
 
-mkdir -p /config
+mkdir -p /config/cert
 
 dockerize -template /app/start.sh:/config/start.sh
 dockerize -no-overwrite -template /app/Caddyfile:/config/Caddyfile
