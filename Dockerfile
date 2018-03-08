@@ -30,6 +30,6 @@ ADD root/ /
 
 RUN chmod -v +x /etc/services.d/*/run /etc/cont-init.d/*
 
-VOLUME ["/etc/caddy", "/app/.caddy", "/srv"]
+VOLUME ["/config", "/srv"]
 WORKDIR /srv
 EXPOSE 80 443
