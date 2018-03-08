@@ -1,7 +1,6 @@
-0.0.0.0
-
-browse
-
-log stdout
-
-errors stdout
+http://0.0.0.0:9080 {
+  gzip
+  browse
+  log stdout
+  errors stdout
+}

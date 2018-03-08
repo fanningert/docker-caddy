@@ -32,4 +32,4 @@ RUN chmod -v +x /etc/services.d/*/run /etc/cont-init.d/*
 
 VOLUME ["/config", "/srv"]
 WORKDIR /srv
-EXPOSE 80 443
+EXPOSE 9080 9443

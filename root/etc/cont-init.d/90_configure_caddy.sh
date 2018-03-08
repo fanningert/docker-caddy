@@ -8,3 +8,4 @@ dockerize -no-overwrite -template /app/Caddyfile:/config/Caddyfile
 chmod +x /config/start.sh
 
 chown -R app:users /config
+chown -R app:users /srv
