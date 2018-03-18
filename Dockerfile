@@ -35,7 +35,7 @@ RUN /usr/bin/caddy -plugins
 
 RUN mkdir /etc/caddy
 COPY Caddyfile /etc/caddy/Caddyfile
-COPY index.html /srv/index.php
+COPY index.php /srv/index.php
 
 VOLUME ["/etc/caddy", "/srv"]
 WORKDIR /srv
