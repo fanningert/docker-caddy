@@ -17,10 +17,11 @@ LABEL caddy_version="0.10.11"
 
 RUN apk update && \
     apk add --no-cache --update bash
-RUN apk add --no-cache --update openssh-client tar php-fpm
+RUN apk add --no-cache --update openssh-client
 
 # essential php libs
-RUN apk add php-curl php-gd php-zip php-iconv php-sqlite3 php-mysql php-mysqli php-json
+RUN apk add --no-cache --update php-fpm
+RUN apk add --no-cache --update php-curl php-gd php-zip php-iconv php-sqlite3 php-mysql php-mysqli php-json
 
 # allow environment variable access.
 RUN echo "clear_env = no" >> /etc/php/php-fpm.conf
