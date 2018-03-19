@@ -21,7 +21,7 @@ RUN apk update && \
 RUN apk add --no-cache --update openssh-client
 
 # Clean up apk cache
-RM rm -rf /var/cache/apk/*
+RUN rm -rf /var/cache/apk/*
 
 # install caddy
 COPY --from=builder /install/caddy /usr/bin/caddy
