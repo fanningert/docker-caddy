@@ -1,7 +1,7 @@
-http://0.0.0.0:9080 {
+http://0.0.0.0 {
   root /srv
   gzip
   browse
-  log stdout
+  #log stdout
   errors stdout
 }

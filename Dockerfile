@@ -20,6 +20,9 @@ RUN apk update && \
     apk add --no-cache --update bash
 RUN apk add --no-cache --update openssh-client
 
+# Clean up apk cache
+rm -rf /var/cache/apk/*
+
 # install caddy
 COPY --from=builder /install/caddy /usr/bin/caddy
 
@@ -31,6 +34,6 @@ ADD root/ /
 
 RUN chmod -v +x /etc/services.d/*/run /etc/cont-init.d/*
 
-VOLUME ["/config", "/srv"]
+VOLUME "/srv"
 WORKDIR /srv
 EXPOSE 9080 9443
