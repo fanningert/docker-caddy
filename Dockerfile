@@ -16,9 +16,9 @@ FROM fanningert/baseimage-alpine
 LABEL maintainer fanningert <thomas@fanninger.at>
 LABEL caddy_version="0.10.11"
 
-RUN apk update && \
-    apk add --no-cache --update bash
-RUN apk add --no-cache --update openssh-client
+RUN apk update
+RUN apk add bash
+RUN apk add openssh-client
 
 # Clean up apk cache
 RUN rm -rf /var/cache/apk/*
