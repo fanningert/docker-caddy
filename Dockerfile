@@ -30,7 +30,7 @@ COPY --from=builder /install/caddy /usr/bin/caddy
 RUN /usr/bin/caddy -version
 RUN /usr/bin/caddy -plugins
 
-ADD root/ /
+ADD root /
 
 RUN chmod -v +x /etc/services.d/*/run /etc/cont-init.d/*
 

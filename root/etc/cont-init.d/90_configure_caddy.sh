@@ -1,12 +1,12 @@
 #!/usr/bin/with-contenv bash
 
-mkdir -p /config/cert
-mkdir -p /conf
+mkdir -p /conf/cert
+mkdir -p /config
 
-dockerize -template /app/start_caddy.sh:/conf/start_caddy.sh
-dockerize -no-overwrite -template /app/Caddyfile:/config/Caddyfile
+dockerize -template /app/start_caddy.sh:/config/start_caddy.sh
+dockerize -no-overwrite -template /app/Caddyfile:/conf/Caddyfile
 
-chmod +x /conf/start_caddy.sh
+chmod +x /config/start_caddy.sh
 
 chown -R app:users /conf
 chown -R app:users /config
