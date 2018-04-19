@@ -14,7 +14,7 @@ RUN VERSION=${version} PLUGINS=${plugins} /bin/sh /usr/bin/builder.sh
 #
 FROM fanningert/baseimage-alpine
 LABEL maintainer fanningert <thomas@fanninger.at>
-LABEL caddy_version="0.10.11"
+LABEL caddy_version="0.10.13"
 
 RUN apk update
 RUN apk add bash
