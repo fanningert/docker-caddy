@@ -1,2 +1,2 @@
 #!/bin/sh
-/usr/bin/caddy --conf=/conf/Caddyfile --log=stdout
+/usr/bin/caddy -agree --conf=/conf/Caddyfile --log=stdout
